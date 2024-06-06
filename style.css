@@ -1,0 +1,363 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+header {
+  background-color: #f5f5f5;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+h1 {
+  font-size: 2rem;
+  margin: 0;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex; /* Make navigation bar items inline */
+}
+
+nav li {
+  margin-right: 20px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #333;
+}
+
+nav li:last-child {  /* Search bar styles */
+  margin-right: 0; /* Remove margin from last item (search bar) */
+  padding-left: 20px; /* Add padding to the left of search bar */
+}
+
+/* Search bar styles (assuming it remains after Electronics) */
+nav form {
+  display: flex; /* Make search bar and button inline */
+  align-items: center; /* Align search elements vertically */
+  width: 300px; /* Adjust width as needed */
+  flex: 1;  /* Makes search bar container grow to fill remaining space */
+}
+
+#search-bar {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  margin-right: 10px; /* Add margin between search bar and button */
+}
+
+nav button[type="submit"] {
+  background-color: #333;
+  color: #fff;
+  padding: 10px 15px; /* Adjust padding as needed */
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+main {
+  padding: 40px;
+}
+
+section.category-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  align-items: center; /* Center the grid items vertically */
+}
+
+.category-item {
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.2s ease-in-out;
+}
+
+.category-item img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+:root
+{
+  --box-shadow: 0 .5rem 1rem rgba(0,0,0.1);
+  --border: 2rem solid rgba(0,0,0.1);
+  --outline: 0.1rem solid rgba(0,0,0.1);
+
+
+}
+.category-item h3 {
+  font-size: 2rem;
+  margin-bottom: 5px;
+  
+}
+
+.category-item p {
+  font-size: 0.9rem;
+  color: #888;
+}
+
+.category-item:hover {
+  transform: scale(1.05);
+}
+
+footer {
+  background-color: #f5f5f5;
+  padding: 10px;
+  text-align: center;
+}
+
+nav li.dropdown {
+  position: relative;
+}
+
+nav li.dropdown .dropdown-menu {
+  display: none;
+  position: absolute;
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav li.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+nav li.dropdown .dropdown-menu li {
+  padding: 10px;
+}
+
+nav li.dropdown .dropdown-menu li:hover {
+  background-color: #ddd; /* Grey background on hover */
+}
+
+nav li.dropdown .dropdown-menu a {
+  color: #333;
+  text-decoration: none;
+  /* Remove default behavior to allow link following */
+  pointer-events: auto;
+}
+
+#search-bar {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  margin-right: 10px; /* Add margin between search bar and button */
+}
+
+#center {
+  align-items: center;
+  transition: all .2s linear;
+}
+
+/* Styles for dynamically loaded content */
+#main-content h1 {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+#main-content h2 {
+  font-size: 1.5rem;
+  color: #555;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+#main-content h3 {
+  font-size: 1.2rem;
+  color: #777;
+  margin-top: 15px;
+  margin-bottom: 10px;
+}
+
+#main-content p {
+  font-size: 1rem;
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 10px;
+}
+
+#main-content ul {
+  list-style-type: disc;
+  padding-left: 20px;
+  margin-bottom: 20px;
+}
+
+#main-content ul li {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 5px;
+}
+
+#main-content {
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+#center :hover
+{
+color: #969696;
+
+}
+.icons div
+{
+  height: 2.5rem;
+  width: 2.5rem;
+  line-height: 2.5rem; 
+  border-radius: .5rem;
+  background: transparent;
+  color: black;
+  font-size: 2rem;
+  margin-right: 1.5rem;
+  text-align: center;
+  align-items:center;
+  cursor: pointer;
+}
+.icons div:hover
+{
+  background-color: #999999;
+}
+#menu-btn
+{
+  display: none;
+}
+.search-form
+{
+  position: absolute;
+  border: 0px solid;
+  top: 10%;
+  right: -110%;
+  width: 30rem;
+  height: 5rem;
+  background-color:#ffffff;
+  border-radius: .5rem;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+}
+.search-form.active{
+left: 5rem;
+transition: .4s linear;
+}
+.search-form input
+{
+  height: 100%;
+  width: 100%;
+  background: none;
+  text-transform: none;
+  font-size: 1.2rem;
+  padding: 0 1rem;
+}
+.search-form label
+{
+  font: size 2rem; 
+  padding-right: 1.5rem;
+  color: black;
+  cursor: pointer;
+}
+.search-form label:hover{
+  color: #999999;
+}
+
+.login-form
+{
+  background-color: #e9e9e9;
+  border: 0px solid;
+  position: absolute;
+  top: 12%;
+  width: 20rem;
+  height: 18rem;
+  right: -30%;
+  box-shadow: var(--box-shadow);
+  padding: 1rem;
+  border-radius: .5rem;
+  text-align: center;
+}
+
+.login-form.category-item:hover{
+right: 30%;
+transition: .4s linear;
+}
+.login-form h3{
+
+   font-size: 1rem;
+   text-transform: uppercase;
+   color: black;
+}
+.login-form .box{
+  border: 0.5px solid;
+  margin: 1em 0;
+  background: #eee;
+  border-radius: .5rem;
+  padding: .5rem;
+  font-size: .9rem;
+  text-transform: none;
+  align-items: center;
+
+}
+.login-form .nnn {
+font-size: 1rem;
+margin-top: .3rem;
+border-radius: .5rem;
+}
+.login-form .nnn:hover{
+  background-color: #818181;
+  box-shadow: var(--box-shadow);
+  font-size: 1.1rem;;
+}
+.login-form p{
+  font-size: .9rem;
+  padding: .1rem 0;
+  margin-top: .5rem;
+  color: #414141;
+}
+.login-form p a{
+  font-size: .8rem;
+  padding: .5rem 0;
+
+}
+.login-form .box{
+  padding: 1rem;
+  width: 90%;
+  margin: .5rem 0;
+  text-transform: none;
+}
+.content{
+display: flex;
+align-items: center;
+justify-content: space-between;
+font-size: small;
+padding-bottom: 1.5rem;
+margin-bottom: 1rem;
+border-bottom: #333 solid;
+}
+.content a{
+  color: #666;
+  font-size: 1rem;
+  text-decoration: none;
+}
+
+.content a:hover{
+  color:black;
+}
+.content a i{
+  color: #414141;
+padding-right: .5rem;
+}
+.abcd span{
+  background-color: #ff0000;
+}
